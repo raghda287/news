@@ -1,8 +1,9 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:news/home/home_screen.dart';
 import 'package:news/theme/my_theme.dart';
 
 class HomeDrawer extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,12 +23,18 @@ class HomeDrawer extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Icon(Icons.list,size: 30,),
-                    SizedBox(width: 8,),
-                    Text('Categories',style:  Theme.of(context).textTheme.headline6,),
-                  ],
+                InkWell(
+                  onTap: (){
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, HomeScreen.routeName);
+                  },
+                  child: Row(
+                    children: [
+                      Icon(Icons.list,size: 30,),
+                      SizedBox(width: 8,),
+                      Text('Categories',style:  Theme.of(context).textTheme.headline6,),
+                    ],
+                  ),
                 ),
                 SizedBox(height: 12,),
                 Row(
