@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:news/news/news_details.dart';
 import 'package:news/splash/splash_screen.dart';
 import 'package:news/theme/my_theme.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.routeName:(_)=>SplashScreen(),
         HomeScreen.routeName:(_)=>HomeScreen(),
+        NewsDetails.routeName:(_)=>NewsDetails(),
       },
       initialRoute: SplashScreen.routeName,
       theme: MyTheme.lightTheme,
